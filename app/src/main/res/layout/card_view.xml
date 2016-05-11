@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:padding="1dp"
+              android:background="@color/cardview_light_background"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardElevation="1dp"
+        card_view:cardUseCompatPadding="true"
+        android:id="@+id/cv"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/contact"
+                android:id="@+id/img"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:paddingLeft="5dp"
+                android:fontFamily="sans-serif-thin"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/img"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/number"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="10dp"
+                android:paddingLeft="5dp"
+                android:layout_below="@+id/name"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/img"
+                android:textColor="@color/black_translucent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:paddingLeft="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="10dp"
+                android:layout_below="@+id/number"
+                android:layout_toRightOf="@+id/img"
+                android:textColor="@color/black_translucent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/type"
+                android:paddingLeft="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="10dp"
+                android:layout_below="@+id/date"
+                android:layout_toRightOf="@+id/img"
+                android:textColor="@color/black_translucent"
+                />
+
+
+            <!--<Button-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:textColor="@color/cardview_light_background"-->
+                <!--style="@style/Widget.AppCompat.Button.Colored"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:fontFamily="sans-serif-condensed"-->
+                <!--android:id="@+id/export"-->
+                <!--android:background="@color/colorPrimary"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+
+                <!--android:text="Export"-->
+                <!--/>-->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/export"
+                android:id="@+id/exportImage"
+                android:layout_alignParentRight="true"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

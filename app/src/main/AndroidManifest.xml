@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.jianloong.calllogtocal">
+
+    <!-- Permission for read contacts -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+
+    <!-- Permission for SMS -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- Permission to read contacts -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Permission to use calendar -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="io.github.jianloong.calllogtocal.PermissionActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="CalendarActivity" />
+        <activity android:name="MainActivity" />
+    </application>
+
+    <!-- This meta data is required to get the calendar working. -->
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+</manifest>

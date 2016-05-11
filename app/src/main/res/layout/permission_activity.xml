@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/content_frame"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardElevation="1dp"
+            card_view:cardUseCompatPadding="true"
+            android:id="@+id/cv"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:src="@mipmap/permission"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:weightSum="1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deny Permission"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/denyPermission"
+                android:layout_weight="0.5"
+                android:layout_gravity="bottom"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="Grant Permission"
+                android:id="@+id/grantPermission"
+                android:layout_weight="0.5"
+                android:layout_gravity="bottom"
+                />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+</LinearLayout>
